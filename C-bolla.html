@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>C-bolla</title>
+  
+       
+        <title>C-bolla</title>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.slider {
+    margin: 0 ;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    
+}
+
+
+
+.slider ul{
+    padding: 30px 20px;
+    display: flex;
+    animation: cambio 9s infinite alternate;
+    width: 100%;
+   
+ 
+    
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+    padding: none;
+  
+}
+.slider img{
+    
+    width: 321;
+    height: 380.7px;
+    
+}  
+.slider a{
+    background-color: black;
+}
+   
+.slider img:hover{
+    transform: scale(1.1);
+   
+}
+
+@keyframes cambio{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -25%;}
+    45%{margin-left: -25%;}
+
+    50%{margin-left: -50%;}
+    70%{margin-left: -50%;}
+
+    75%{margin-left: -60%;}
+    100%{margin-left: -60%;}
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: white;
+}
+
+
+
+a{
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    background-color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+a:hover{
+    color: aqua;
+}
+
+.pasarela p{
+    color: white;
+    align-items: center;
+   text-align: center;
+}
+.encabezado {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: lighter;
+    font-size: 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.segundoencabezado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: lighter;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2{
+    color: gray;
+    margin-left: 2%;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    
+
+}
+table {
+    margin: 0 auto;
+}
+<!-- para poner imagen de fondo>
+
+.slider1 {
+    width: 50px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+    list-style: none;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.slider1 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+}
+
+.slider1 input[type="radio"] {
+
+    position: relative;
+    z-index: 50;
+    margin: 10px;
+
+}
+
+.slider1 input[type="radio"]:checked ~ img {
+    opacity: 1;
+}
+
+.pasarela {
+  
+    width: 100%;
+    height: 100%;
+    
+}
+
+.pasarela a{
+    background-color: black;
+}
+
+.pasarela img{
+
+    width: 203px;
+    height: 460px;
+    
+}
+.pasarela td:hover{
+transform: scale(1.1);
+
+}
+
+.mostrar-menu{
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+    color:white;
+    padding: 10px 20px;
+}
+
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+    color: white;
+}
+.mostrar-menu{
+    order: 1;
+}
+
+
+.mostrar-menu:hover,
+.esconder-menu:hover{
+color: aqua;
+}
+
+#check{
+    display: none;
+}
+@media(max-width:768px){
+            .mostrar-menu,
+            .esconder-menu{
+                display: block;
+            }
+        .mostrar-menu{
+            text-align: right;
+        }
+
+        .menu{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: black;
+            right: -100%;
+            top: 0;
+            text-align: center;
+            padding: 100px 0px;
+            z-index: 100;
+            transition: 0.8s;
+        }
+
+        .menu a{
+            display: block;
+            padding: 20px;
+        }
+
+        .esconder-menu{
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+        #check:checked ~ .menu{
+            right: 0;
+        }
+
+      
+}
+
+
+
+
+.encabezado2 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-top: 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: lighter;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:gray;
+}
+
+.txtpasarela{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: lighter;
+font-size: 20PX;
+
+}
+
+
+
+.pasarela-mobile .fila .columna{
+    display: flex;
+
+}
+
+.pasarela-mobile{
+    display: none;
+    width: 100%;
+}
+
+@media(max-width:768px){
+    .pasarela-mobile{
+        display: block;
+    }
+    
+    .pasarela{
+        display: none;
+    }
+    
+}
+
+.table-mobile{
+    width: 100%;
+}
+
+.pasarela-mobile {
+  
+   
+    width: 100%;
+    height: 100%;
+    
+}
+  
+.pasarela-mobile img{
+
+    width: 203px;
+    height: 460px;
+
+}
+.pasarela-mobile img:hover{
+transform: scale(1.1);
+
+}
+td {
+    
+    /*border: 2px black solid;*/
+}
+
+</style>
+
+
+
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="check">
+                <label for="check" class="mostrar-menu">&#8801</label>
+        <nav class="menu">
+            
+            <a href="pagina anime.html" >Anime</a>
+            <a href="pagina anime.html" >Sports</a>
+            <a href="pagina anime.html" >Mascotas</a>
+            <a href="pagina anime.html" >Dama</a>
+            <a href="pagina anime.html" >Gym</a>
+            <a href="pagina anime.html" >Geek</a>
+            <a href="pagina anime.html" >Kawaii</a>
+            <a href="pagina anime.html" >Otros</a>
+            
+            <label for="check" class="esconder-menu">&#215</label>
+        </nav>
+    </header>
+        <h1 class="encabezado">C-bolla</h1>
+            <br>
+        <h2>Lo más Top</h2>
+        <br>
+        <div id="slider" class="slider">
+            <ul>
+                <li>
+                   <a href="imagenes/Cats/playeras/wepik-export-20230607032627gdGw.png"> <img src="short_sleeves_black_t_shirt_mockup-removebg-preview.png" alt=""></a>
+                    
+                </li>
+                <li>
+                    <a href="imagenes/Cats/playeras/wepik-export-202306070327409oSW.png"> <img src="T-Shirt_Black.png" alt="">  </a>        
+                </li>
+                <li>
+                    <a href="imagenes/Cats/playeras/wepik-export-202306070336463wHM.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-202306070336463wHM-removebg-preview.png" alt="">  </a>        
+                </li>
+                <li>
+                    <a href="imagenes/Cats/playeras/wepik-export-20230607033737SdQd.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-20230607033737SdQd-removebg-preview.png" alt="">  </a>        
+                </li>
+                <li>
+                    <a href="imagenes/Cats/playeras/wepik-export-20230607032627gdGw.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-20230607032627gdGw-removebg-preview.png" alt="">  </a>
+                     
+                 </li>
+                 <li>
+                     <a href="imagenes/Cats/playeras/wepik-export-202306070327409oSW.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-202306070327409oSW-removebg-preview.png" alt=""></a>        
+                 </li> 
+            </ul>
+        </div>
+        <br>
+        <br>
+        <h2>Lo Nuevo</h2>
+        <br>
+        <div class="slider">
+            <ul>
+                <li>
+                   <a href="imagenes/Cats/playeras/wepik-export-20230607032627gdGw.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-20230607032627gdGw-removebg-preview.png" alt="">  </a>
+                    
+                </li>
+                <li>
+                    <a href="imagenes/Cats/playeras/wepik-export-202306070327409oSW.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-202306070327409oSW-removebg-preview.png" alt="">  </a>        
+                </li>
+                <li>
+                    <a href="imagenes/Cats/playeras/wepik-export-202306070336463wHM.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-202306070336463wHM-removebg-preview.png" alt="">  </a>        
+                </li>
+                <li>
+                    <a href="imagenes/Cats/playeras/wepik-export-20230607033737SdQd.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-20230607033737SdQd-removebg-preview.png" alt="">  </a>        
+                </li>
+                <li>
+                    <a href="imagenes/Cats/playeras/wepik-export-20230607032627gdGw.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-20230607032627gdGw-removebg-preview.png" alt="">  </a>
+                     
+                 </li>
+                 <li>
+                     <a href="imagenes/Cats/playeras/wepik-export-202306070327409oSW.png"> <img src="imagenes/Cats/playeras/sin fondo/wepik-export-202306070327409oSW-removebg-preview.png" alt="">  </a>        
+                 </li> 
+            </ul>
+        </div>
+        <br>
+        <br>
+        <h2 class="encabezado2">y tú... que capa eres?</h2>
+        <br>
+        <br>
+        <div >
+           <table class="pasarela">
+            
+            <tr>
+                <td class="deportes">
+                    <p class="txtpasarela">Sports</p>
+                    <a href="pagina anime.html" ><img src="pasarela/deportes/Cafr2394_max_verstapen_and_formula_one_car_39382347-b58b-451a-a5e0-762389c0e187.png" alt=""></a>
+                 </td>
+                
+                 <td class="gym">
+                    <p class="txtpasarela">Gym</p>
+                    <a href="pagina anime.html" ><img src="pasarela/Gym/Cafr2394_wonderwoman_exercising_with_dumbell_5852b4a6-7912-4730-8970-9e6ba6f04f84.png" alt=""></a>
+                 </td>
+                 <td class="anime">
+                    <p class="txtpasarela">Amine</p>
+                    <img src="pasarela/anime/C-bolla_a_flat_dualtone_son_goku_black_and_yellow_e0640326-a744-4f4a-95b5-8ee3ccaba28f.png" alt="">
+                </td>
+                 <td class="mascotas">
+                    <p class="txtpasarela">Mascotas</p>
+                    <img src="pasarela/mascotas/Cafr2394_a_flat_dualtone_futuristic_cat_with_glasses_and_suit_y_8fd03852-acce-4385-8787-9133a5766225.png" alt="">
+                </td>
+               
+                <td class="Geek">
+                    <p class="txtpasarela">Geek</p>
+                    <img src="pasarela/Geek/Cafr2394_geek_grapping_glasses_and_ipad_68bd2dde-fdcd-405f-ae0a-77aee596e6fe.png">
+                </td>
+                <td class="Otros">
+                    <p class="txtpasarela">Otros</p>
+                    <img src="pasarela/otros/Cafr2394_a_flat_dualtone_oni_girl_wearing_Menpo_silhouette_blac_bac9a375-c93b-4805-a55b-ec0790a24016.png" alt="">
+                </td>
+            </tr>
+           </table>
+        </div>
+
+        <div class="pasarela-mobile">
+            <div class="fila">
+               <Table class="table-mobile">
+                <tr>
+                    <td class="anime">
+                        <p class="txtpasarela">Amine</p>
+                        <img src="pasarela/anime/C-bolla_a_flat_dualtone_son_goku_black_and_yellow_e0640326-a744-4f4a-95b5-8ee3ccaba28f.png" alt="">
+                    </td>
+                     <td class="gym">
+                        <p class="txtpasarela">Gym</p>
+                        <img src="pasarela/Gym/Cafr2394_wonderwoman_exercising_with_dumbell_5852b4a6-7912-4730-8970-9e6ba6f04f84.png" alt="">
+                     </td>
+                     <td class="mascotas">
+                        <p class="txtpasarela">Mascotas</p>
+                        <img src="pasarela/mascotas/Cafr2394_a_flat_dualtone_futuristic_cat_with_glasses_and_suit_y_8fd03852-acce-4385-8787-9133a5766225.png" alt="">
+                    </td>
+                </tr>
+               </Table>
+            </div>
+
+            <div class="fila">
+                <Table class="table-mobile">
+                 <tr>
+                    <td class="deportes">
+                        <p class="txtpasarela">Sports</p>
+                        <img src="pasarela/deportes/Cafr2394_messi_with_inter_miami_tshirt_0d55f9ad-feaf-425c-945c-d4bab39db720.png" alt="">
+                     </td>
+                    <td class="Geek">
+                        <p class="txtpasarela">Geek</p>
+                        <img src="pasarela/Geek/Cafr2394_geek_grapping_glasses_and_ipad_68bd2dde-fdcd-405f-ae0a-77aee596e6fe.png">
+                    </td>
+                    <td class="Otros">
+                        <p class="txtpasarela">Otros</p>
+                        <img src="pasarela/otros/Cafr2394_a_flat_dualtone_oni_girl_wearing_Menpo_silhouette_blac_bac9a375-c93b-4805-a55b-ec0790a24016.png" alt="">
+                    </td>
+                     
+                 </tr>
+                </Table>
+             </div>
+
+                    
+        </div>
+
+
+
+        <br>
+        <br>
+    </body>
+</html>
